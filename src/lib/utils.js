@@ -437,6 +437,14 @@ function addGravatarSupport(pkgInfo: any) {
   return pkgInfo;
 }
 
+export function capitalizeFirstLetter(character: string) {
+  return character[0].toUpperCase() + character.slice(1);
+}
+
+export function buildToken(type: string, token: string) {
+  return `${capitalizeFirstLetter(type)} ${token}`;
+}
+
 export {
   addGravatarSupport,
   deleteProperties,
